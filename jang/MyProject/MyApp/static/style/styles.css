@@ -1,0 +1,22 @@
+body{
+          background-color: lavenderblush;
+}
+
+h1 {
+          color: teal;
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 800;
+          font-size: xx-large;
+}
+
+img {
+          width: 250px;
+          height: 250px;
+          margin-top: 100px;
+          margin-left: 650px;
+          border: 8px dotted plum;
+          box-shadow: 5px 5px 5px maroon;
+          border-radius: 20px;
+          float:none;
+}

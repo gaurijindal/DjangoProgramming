@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+    Name:
+    <input type="text" name="name" value="{{name}}">
+    <span>{{name_error}}</span><br><br>
+    Email:
+    <input type="text" name="email" value="{{email}}">
+    <span>{{email_error}}</span><br><br>
+    Password:
+    <input type="text" name="password" value="{{password}}">
+    <span>{{password_error}}</span><br><br>
+    <input type="submit" value="submit">
+
+    {% if submitted_values %}
+    <h1>The submitted values are:</h1>
+    <h4>Name: {{submitted_values.name}}</h4>
+    <h4>Email: {{submitted_values.email}}</h4>
+    <h4>Password: {{submitted_values.password}}</h4>
+    {% endif %}
+    </form>   
+</body>
+</html>

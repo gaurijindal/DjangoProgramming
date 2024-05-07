@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Eatery</title>
+</head>
+<style>
+          body {
+                    background-color: azure;
+          }
+</style>
+
+<body>
+          <h1 style="text-align: center; font-family:'Times New Roman', Times, serif;">Welcome to Our Eatery</h1>
+
+          <table>
+                    <tbody>
+                              {% if delicacy %}
+
+                              <h3>The cost of {{delicacy.Name}} is {{delicacy.Cost}}</h3>
+
+                              {% else %}
+
+                              <tr>
+                                        <td>Item Not Found</td>
+                              </tr>
+                              {% endif %}
+                    </tbody>
+          </table>
+
+</body>
+
+</html>

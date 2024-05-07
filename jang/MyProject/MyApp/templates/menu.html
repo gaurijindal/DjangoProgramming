@@ -1,0 +1,21 @@
+<!-- {% for item in menu %} 
+{{item.Name}}--{{item.Cost}} <br>
+{% endfor %} -->
+
+<!-- <table border="1px solid black">
+          {% for item in menu %}
+<tr>
+          <td>{{item.Name}}</td>
+          <td>{{item.Cost}}</td>
+</tr>
+{% endfor %}
+</table> -->
+
+<table border="1">
+    {% for item in menu %}
+    <tr {% if item.Cost=='free' %} style="color:red;" {% endif %}>
+        <td>{{item.Name}}</td>
+        <td>{{item.Cost}}</td>
+    </tr>
+    {% endfor %}
+</table>

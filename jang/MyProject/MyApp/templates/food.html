@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+Food
+{% endblock %}
+
+{% block css %}
+h1{
+color : brown;
+}
+table{
+          width: 100%;
+          font-size : 35px;
+}
+{% endblock %}
+
+{% block content %}
+<h1>Food</h1>
+<p>Explore Our Menu</p>
+
+<table border="2">
+          <thead>
+                    <tr>
+                              <td><b>Name</b></td>
+                              <td><b>Cost</b></td>
+                    </tr>
+          </thead>
+          <tbody>
+                    {% for item in items %}
+                    <tr>
+                              <td><a href="{% url 'feed' item=item.Name %}">{{item.Name}}</a></td>
+                              <td>{{item.Cost}}</td>
+                    </tr>
+                    {% endfor %}
+          </tbody>
+</table>
+{% endblock %}

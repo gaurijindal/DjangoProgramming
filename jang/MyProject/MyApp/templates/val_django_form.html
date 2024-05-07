@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>Validate Django Form</title>
+</head>
+<body>
+         <form method="POST" novalidate>
+                    {% csrf_token %}
+                    {{form.as_p}}
+          <input type = "submit" value = "Submit">
+          </form>
+{% if submitted_details %}
+<h1>The submitted details are:</h1>
+<h4>Name:{{submitted_details.name}}</h4>
+<h4>Email:{{submitted_details.email}}</h4>
+<h4>Password:{{submitted_details.password}}</h4>
+{% endif %}
+</body>
+</html>
